@@ -38,6 +38,21 @@
           </div>
         </nav>
       </div>
+      <div class="theme-toggle-container">
+        <button
+          class="theme-toggle-btn"
+          id="themeToggle"
+          aria-label="Toggle theme mode"
+        >
+          <span class="theme-icon light-icon">
+            <i class="fas fa-sun"></i>
+          </span>
+          <span class="theme-icon dark-icon">
+            <i class="fas fa-moon"></i>
+          </span>
+          <span class="toggle-switch"></span>
+        </button>
+      </div>
     </header>
 
     <!-- Hero Section -->
@@ -83,16 +98,16 @@
               <div class="skill-item">
                 <div class="skill-name">
                   <span>HTML/CSS</span>
-                  <span>90%</span>
+                  <span>95%</span>
                 </div>
                 <div class="skill-bar">
-                  <div class="skill-level" style="width: 90%"></div>
+                  <div class="skill-level" style="width: 95%"></div>
                 </div>
               </div>
               <div class="skill-item">
                 <div class="skill-name">
                   <span>JavaScript</span>
-                  <span>80%</span>
+                  <span>85%</span>
                 </div>
                 <div class="skill-bar">
                   <div class="skill-level" style="width: 80%"></div>
@@ -105,6 +120,15 @@
                 </div>
                 <div class="skill-bar">
                   <div class="skill-level" style="width: 85%"></div>
+                </div>
+              </div>
+               <div class="skill-item">
+                <div class="skill-name">
+                  <span>C</span>
+                  <span>93%</span>
+                </div>
+                <div class="skill-bar">
+                  <div class="skill-level" style="width: 93%"></div>
                 </div>
               </div>
               <div class="skill-item">
@@ -205,71 +229,60 @@
     <section id="contact">
       <div class="container">
         <div class="section-title">
-          <h2>Get In Touch</h2>
+        <h2>Get In Touch</h2>
         </div>
-        <div class="contact-content">
-          <div class="contact-info">
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-map-marker-alt"></i>
-              </div>
-              <div class="contact-text">
-                <h3>Location</h3>
-                <p>Djelfa, Algeria</p>
-              </div>
+        <div class="contact-grid">
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3 class="contact-title">Location</h3>
+                <p class="contact-detail">Djelfa, Algeria</p>
             </div>
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-envelope"></i>
-              </div>
-              <div class="contact-text">
-                <h3>Email</h3>
-                <a
-                  title="send me an email"
-                  href="mailto:mukwayaowen21@gmail.com"
-                  style="text-decoration: none; color: #3498db"
-                  ><p>mukwayaowen21@gmail.com</p></a
-                >
-                <span class="tooltiptext">Tap to send an email</span>
-              </div>
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3 class="contact-title">Email</h3>
+                <p class="contact-detail">mukwayaowen21@gmail.com</p>
+                <a href="mailto:mukwayaowen21@gmail.com" class="contact-link">Tap to send an email</a>
             </div>
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-phone"></i>
-              </div>
-              <div class="contact-text">
-                <h3>Phone</h3>
-                <a
-                  title="call this number"
-                  href="tel:+213 555983843"
-                  style="text-decoration: none; color: #3498db"
-                  ><p>+213 555983843</p></a
-                >
-                <span class="tooltiptext">Tap to call</span>
-              </div>
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <h3 class="contact-title">Phone</h3>
+                <p class="contact-detail">+213 555983843</p>
+                <a href="tel:+213555983843" class="contact-link">Tap to call</a>
             </div>
-            <div class="contact-item">
-              <div class="contact-icon">
-                <i class="fas fa-graduation-cap"></i>
-              </div>
-              <div class="contact-text">
-                <h3>Education</h3>
-                <p>
-                  University of Djelfa<br />Bachelor in Web Development and
-                  Mobile Applications
-                </p>
-              </div>
+            <div class="contact-card">
+                <div class="contact-icon">
+                    <i class="fas fa-graduation-cap"></i>
+                </div>
+                <h3 class="contact-title">Education</h3>
+                <p class="contact-detail">University of Djelfa</p>
+                <p class="contact-detail">Bachelor in Web Development and Mobile Applications</p>
             </div>
-          </div>
+            
+        </div>
+      </div>
+    </section>
+    <section class="contact-form-section">
+      <div class="container">
+        <div class="section-title">
+        <h2 >Contact Me</h2>
+        </div>
           <div class="contact-form">
             <form id="contactForm" method="post" netlify>
+              <div class="form-row">
               <div class="form-group">
-                <label for="name">Name</label>
+                <label for="name">Full Name</label>
                 <input
                   type="text"
                   id="name"
                   class="form-control"
                   name="Name"
+                  placeholder="Enter your name"
                   required
                 />
               </div>
@@ -280,8 +293,10 @@
                   id="email"
                   class="form-control"
                   name="Email"
+                  placeholder="Enter your email"
                   required
                 />
+              </div>
               </div>
               <div class="form-group">
                 <label for="subject">Subject</label>
@@ -290,6 +305,7 @@
                   id="subject"
                   class="form-control"
                   name="Subject"
+                  placeholder="What is this regarding?" 
                   required
                 />
               </div>
@@ -299,6 +315,7 @@
                   id="message"
                   class="form-control"
                   name="Message"
+                  placeholder="Tell me about your project or inquiry..."
                   required
                 ></textarea>
               </div>
@@ -344,6 +361,15 @@
               <li><a href="#about">About</a></li>
               <li><a href="#projects">Projects</a></li>
               <li><a href="#contact">Contact</a></li>
+            </ul>
+          </div>
+          <div class="footer-column">
+            <h3>Skills</h3>
+            <ul class="footer-links">
+              <li><a href="#">HTML/CSS</a></li>
+              <li><a href="#">JavaScript</a></li>
+              <li><a href="#">Responsive Design</a></li>
+              <li><a href="#">UI/UX Design</a></li>
             </ul>
           </div>
           <div class="footer-column">
